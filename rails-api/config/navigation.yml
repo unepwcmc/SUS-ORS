@@ -1,0 +1,28 @@
+---
+header:
+  -
+    name: Home
+    url: /
+  - 
+    name: Test
+    url: /test
+    dropdown:
+      -
+        name: Example 1
+        url: /example-1
+      -
+        name: Example 2
+        url: /example-2
+      -
+        name: Example 3
+        url: /example-3
+  -
+    name: About
+    url: /about
+footer:
+  -
+    name: Home
+    url: /
+  -
+    name: About
+    url: /about

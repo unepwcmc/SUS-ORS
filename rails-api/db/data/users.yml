@@ -1,0 +1,9 @@
+---
+
+- name: Camilla Ravera
+  email: camilla.ravera@test.it
+  password: Passw0rd!
+
+- name: Rosa Luxemburg
+  email: rosa.luxemburg@test.de
+  password: Passw0rd!

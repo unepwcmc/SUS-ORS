@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-xl lg:text-2xl xl:text-4xl;
+  }
+
+  h2 {
+    @apply text-lg lg:text-xl xl:text-3xl;
+  }
+
+  h3 {
+    @apply text-base lg:text-lg xl:text-2xl;
+  }
+
+  h4 {
+    @apply text-sm lg:text-base xl:text-xl font-semibold lg:font-medium;
+  }
+
+  h5 {
+    @apply text-xs lg:text-sm xl:text-base font-medium;
+  }
+
+  h6 {
+    @apply text-xs font-extrabold;
+  }
+
+  p {
+    @apply leading-normal lg:leading-relaxed xl:leading-loose;
+  }
+}
+
+
+@layer base {
+  .admin h1 {
+    @apply text-xl ;
+  }
+
+  .admin h2 {
+    @apply text-lg ;
+  }
+
+  .admin h3 {
+    @apply text-base;
+  }
+
+  .admin h4 {
+    @apply text-sm font-semibold;
+  }
+
+  .admin h5 {
+    @apply text-xs font-bold;
+  }
+
+  .admin h6 {
+    @apply text-xs font-extrabold;
+  }
+
+  .admin p {
+    @apply leading-normal lg:leading-relaxed xl:leading-loose;
+  }
+}
