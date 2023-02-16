@@ -12,6 +12,10 @@ const POLYFILL_FEATURES = [ // @see https://polyfill.io/v3/url-builder/
 ]
 
 export default {
+  server: {
+    port: 8080
+    // port: process.env.PORT || 8080
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Rails 7 Nuxt Template',
