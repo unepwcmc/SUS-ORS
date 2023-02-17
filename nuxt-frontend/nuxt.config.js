@@ -13,8 +13,8 @@ const POLYFILL_FEATURES = [ // @see https://polyfill.io/v3/url-builder/
 
 export default {
   server: {
-    port: 8080
-    // port: process.env.PORT || 8080
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || 8080
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -57,12 +57,14 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/tailwindcss
+    // https://tailwindcss.nuxtjs.org/
     '@nuxtjs/tailwindcss'
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://i18n.nuxtjs.org/
+    // https://github.com/nuxt-community/i18n-module
+    '@nuxtjs/i18n',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -71,8 +73,10 @@ export default {
     '@nuxtjs/auth-next',
     // https://github.com/LinusBorg/portal-vue
     'portal-vue/nuxt',
-    // https://content.nuxtjs.org/
-    '@nuxt/content'
+    // https://tailwindcss.nuxtjs.org/
+    '@nuxtjs/tailwindcss',
+    // https://github.com/LinusBorg/portal-vue
+    'portal-vue/nuxt'
   ],
 
   content: {
@@ -92,7 +96,7 @@ export default {
         },
         endpoints: {
           login: {
-            url: '/api/admin/auth/sign_in',
+            url: '/api/auth/sign_in',
             method: 'post',
             headers: {
               Accept: 'application/json',
@@ -100,7 +104,7 @@ export default {
             }
           },
           logout: {
-            url: '/api/admin/auth/sign_out',
+            url: '/api/auth/sign_out',
             method: 'delete',
             headers: {
               Accept: 'application/json',
@@ -108,7 +112,7 @@ export default {
             }
           },
           user: {
-            url: '/api/admin/auth/user',
+            url: '/api/auth/user',
             method: 'get',
             headers: {
               Accept: 'application/json',
@@ -119,11 +123,12 @@ export default {
       }
     },
     redirect: {
-      login: '/admin/login',
-      logout: '/admin/login',
-      callback: '/admin/login',
-      home: '/admin/'
-    }
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/dashboard/'
+    },
+    plugins: ['~/plugins/auth/auth-i18n.js']
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -139,9 +144,17 @@ export default {
 
   proxy: {
     '/api/': {
-      target: process.env.RAILS_ENDPOINT,
+      target: process.env.RAILS_API_ENDPOINT,
       pathRewrite: { '^/api/': '' }
+    },
+    '/rails/': {
+      target: process.env.RAILS_ENDPOINT
     }
+  },
+
+  publicRuntimeConfig: {
+    baseUrl: process.env.BASE_URL,
+    directUploadsEndpoint: `${process.env.RAILS_ENDPOINT}/rails/active_storage/direct_uploads`
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -153,9 +166,42 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, { isDev, isClient }) {
+      config.resolve.alias.vue = 'vue/dist/vue.common' // required for vue runtime compiler
+    },
+    html: {
+      minify: {
+        decodeEntities: false // @see nuxt-protected-mailto
+      }
+    },
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-import': {},
+        'tailwindcss/nesting': {},
+        autoprefixer: {}
+      }
+    },
+    transpile: [
+      '@rails/activestorage',
+      'defu'
+    ]
   },
 
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css'
+  extend (config, ctx) {
+    // Run ESLint on save
+    if (ctx.isDev && ctx.isClient) {
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/,
+        options: {
+          fix: true
+        }
+      })
+    }
   }
 }

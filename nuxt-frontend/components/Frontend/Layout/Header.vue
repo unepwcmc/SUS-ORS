@@ -8,11 +8,10 @@
       px-4
       2xl:px-0
       transition
-      bg-gray-100
     "
   >
     <FContainer>
-      <div class="flex justify-between items-center">
+      <div class="flex justify-end items-center">
         <FTDropdown
           class="md:hidden"
           :hide-on-leave-timeout="250"
@@ -68,13 +67,6 @@
             </ul>
           </template>
         </FTDropdown>
-        <NuxtLink
-          to="/"
-          class="order-1 md:order-none"
-          @click.native="onLogoClick"
-        >
-          Logo
-        </NuxtLink>
         <FLayoutNavigationMenu
           class="hidden md:block"
           v-bind="{ navigation }"
