@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-xl">{{ label }}</div>
-    <input v-model="message" :placeholder="placeholder" class="h-10 border-2 pl-4 mt-2"></input>
+    <input v-model="message" :placeholder="placeholder" class="h-14 border-2 pl-4 mt-2 w-full"></input>
   </div>
 </template>
 
