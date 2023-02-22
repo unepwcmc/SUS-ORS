@@ -8,7 +8,7 @@
       </div>
       <FAccountDetails class="mt-16" />
     </div>
-    <div v-else>
+    <div v-else class="w-10/12">
       <div class="flex justify-center" @click="toggleTab('details')">
         <button>
           <FIconTabsTabContacts class="w-[20rem]" />
