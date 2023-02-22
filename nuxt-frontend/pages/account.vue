@@ -1,14 +1,18 @@
 <template>
   <div class="flex justify-center pt-8">
-    <div v-if="isDetailsSelected">
+    <div v-if="isDetailsSelected" class="w-10/12">
       <div class="flex justify-center" @click="toggleTab('contacts')">
-        <FIconTabsTabDetails class="w-[20rem]" />
+        <button>
+          <FIconTabsTabDetails class="w-[20rem]" />
+        </button>
       </div>
       <FAccountDetails class="mt-16" />
     </div>
     <div v-else>
       <div class="flex justify-center" @click="toggleTab('details')">
-        <FIconTabsTabContacts class="w-[20rem]" />
+        <button>
+          <FIconTabsTabContacts class="w-[20rem]" />
+        </button>
       </div>
       <FAccountContacts class="mt-16" />
     </div>
