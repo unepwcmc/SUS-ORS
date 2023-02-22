@@ -1,5 +1,5 @@
 <template>
-  <div class="border-grey-accent w-[13rem] border-2 bg-grey-bg pt-6 flex flex-col items-center">
+  <div class="border-grey-accent border-2 bg-grey-bg pt-6 flex flex-col items-center">
     <div class="mb-4">
       Profile picture
     </div>
