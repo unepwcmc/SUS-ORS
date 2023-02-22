@@ -1,13 +1,13 @@
 <template>
   <div class="flex justify-center pt-8">
     <div v-if="isDetailsSelected">
-      <div @click="toggleTab('contacts')">
+      <div class="flex justify-center" @click="toggleTab('contacts')">
         <FTabsTabDetails class="w-[20rem]" />
       </div>
       <FAccountDetails class="mt-16" />
     </div>
     <div v-else>
-      <div @click="toggleTab('details')">
+      <div class="flex justify-center" @click="toggleTab('details')">
         <FTabsTabContacts class="w-[20rem]" />
       </div>
       <FAccountContacts class="mt-16" />
