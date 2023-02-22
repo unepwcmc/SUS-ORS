@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-8">
-    <div>{{ label }}</div>
+  <div>
+    <div class="text-xl">{{ label }}</div>
     <input v-model="message" :placeholder="placeholder" class="h-10 border-2 pl-4 mt-2"></input>
   </div>
 </template>
