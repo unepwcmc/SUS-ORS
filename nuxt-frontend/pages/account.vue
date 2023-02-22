@@ -4,7 +4,10 @@
       <div class="flex justify-center" @click="toggleTab('contacts')">
         <FTabsTabDetails class="w-[20rem]" />
       </div>
-      <FAccountDetails class="mt-16" />
+      <div class="flex space-x-6">
+        <FAccountProfilePictureCard />
+        <FAccountDetails class="mt-16" />
+      </div>
     </div>
     <div v-else>
       <div class="flex justify-center" @click="toggleTab('details')">
