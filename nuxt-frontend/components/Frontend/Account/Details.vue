@@ -2,13 +2,13 @@
   <div class="flex space-x-6">
     <div>
       <FFormInput label="First name" placeholder="Add your first name" />
-      <FFormInput label="Email address" placeholder="Add email here "/>
-      <FFormInput label="Created by" placeholder="UNEP-WCMC Admin"/>
+      <FFormInput label="Email address" placeholder="Add email here " />
+      <FFormInput label="Created by" placeholder="UNEP-WCMC Admin" />
     </div>
     <div>
-      <FFormInput label="Last name" placeholder="Add your last name "/>
-      <FFormInput label="Phone number" placeholder="Add a phone number"/>
-      <FFormInput label="Created" placeholder="ze date of today"/>
+      <FFormInput label="Last name" placeholder="Add your last name " />
+      <FFormInput label="Phone number" placeholder="Add a phone number" />
+      <FFormInput label="Created" :placeholder="dateToday" />
     </div>
   </div>
 </template>
@@ -18,6 +18,18 @@ export default {
   data () {
     return {
       message: undefined
+    }
+  },
+
+  computed: {
+    dateToday () {
+      const date = new Date()
+      const [month, day, year] = [
+        date.getMonth(),
+        date.getDate(),
+        date.getFullYear()
+      ]
+      return `${day}/${month}/${year}`
     }
   }
 }
