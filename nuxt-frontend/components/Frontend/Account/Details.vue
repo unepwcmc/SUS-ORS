@@ -4,7 +4,7 @@
       My Account details
     </div>
     <div class="flex space-x-6">
-      <FAccountProfilePictureCard class="w-1/5"/>
+      <FAccountProfilePictureCard class="w-1/5" />
       <div class="flex flex-col justify-between w-2/5">
         <FFormInput label="First name" placeholder="Add your first name" />
         <FFormInput label="Email address" placeholder="Add email here " />
