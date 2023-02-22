@@ -21,7 +21,9 @@ module.exports = {
           bg_button: '#335DB0'
         },
         grey: {
-          accent: '#D9D9D9'
+          accent: '#D9D9D9',
+          bg: '#F5F5F5',
+          profile_pic: '#757575'
         }
       }
     }
