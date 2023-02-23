@@ -17,15 +17,52 @@
         </div>
       </div>
     </div>
+    <table class="table-fixed w-full mt-6">
+      <thead class="border-2 border-grey-bg">
+        <tr>
+          <th class="p-4">
+            <div class="flex justify-start">
+              Countries
+            </div>
+          </th>
+          <th>
+            <div class="flex justify-start">
+              Email
+            </div>
+          </th>
+          <th>
+            <div class="flex justify-end pr-14">
+              Actions
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item, itemIndex) in data" :key="itemIndex" :class="{ 'bg-grey-bg': itemIndex % 2 == 1 }">
+          <td class="p-4">
+            {{ item.country }}
+          </td>
+          <td>{{ item.Email }}</td>
+          <td class="flex justify-end pr-14 p-4">
+            ACTION
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    image: {
-      type: String,
-      required: true
+    data: {
+      type: Array,
+      default: () => [
+        { country: 'UK', Email: 'main-respondent-UK@ramsar.com' },
+        { country: 'Malawi', Email: 'main-respondent-Malawi@ramsar.com' },
+        { country: 'Iceland', Email: 'main-respondent-Iceland@ramsar.com' },
+        { country: 'Sweden', Email: 'main-respondent-Sweden@ramsar.com' }
+      ]
     }
   }
 }
