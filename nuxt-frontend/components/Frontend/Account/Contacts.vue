@@ -30,8 +30,8 @@
               Email
             </div>
           </th>
-          <th>
-            <div class="flex justify-end pr-14">
+          <th class="flex justify-end py-4 pr-16">
+            <div class="w-32">
               Actions
             </div>
           </th>
@@ -40,11 +40,21 @@
       <tbody>
         <tr v-for="(item, itemIndex) in data" :key="itemIndex" :class="{ 'bg-grey-bg': itemIndex % 2 == 1 }">
           <td class="p-4">
-            {{ item.country }}
+            <div>
+              {{ item.country }}
+            </div>
           </td>
-          <td>{{ item.Email }}</td>
-          <td class="flex justify-end pr-14 p-4">
-            ACTION
+          <td>
+            <div>
+              {{ item.Email }}
+            </div>
+          </td>
+          <td>
+            <div class="flex justify-end pr-16">
+              <div class="w-32 flex justify-center">
+                <FIconMoreIcons class="w-8" />
+              </div>
+            </div>
           </td>
         </tr>
       </tbody>
