@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <table class="table-fixed w-full mt-6">
+    <table class="table-fixed w-full my-12">
       <thead class="border-2 border-grey-bg">
         <tr>
           <th class="p-4">
@@ -52,7 +52,7 @@
           <td>
             <div class="flex justify-end pr-16">
               <div class="w-32 flex justify-center">
-                <FIconMoreIcons class="w-8" />
+                <FActionsMoreActionsButton />
               </div>
             </div>
           </td>
