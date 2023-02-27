@@ -8,21 +8,19 @@
       <div class="flex flex-col justify-between w-2/5">
         <FFormInput label="First name" placeholder="Add your first name" />
         <FFormInput label="Email address" placeholder="Add email here " />
-        <FFormInput label="Created by" placeholder="UNEP-WCMC Admin" />
+        <FFormInput label="Created by" placeholder="UNEP-WCMC Admin" imposed />
       </div>
       <div class="flex flex-col justify-between w-2/5">
         <FFormInput label="Last name" placeholder="Add your last name " />
         <FFormInput label="Phone number" placeholder="Add a phone number" />
-        <FFormInput label="Created" :placeholder="dateToday" />
+        <FFormInput label="Created" :placeholder="dateToday" imposed />
       </div>
     </div>
     <div class="flex justify-end font-bold space-x-4 mt-8">
-      <button class="flex items-center justify-center py-3 px-8 border-2 border-blue-bg_button rounded text-blue-bg_button">
-        Cancel
-      </button>
-      <button class="flex items-center justify-center py-3 px-8 bg-blue-bg_button rounded text-white">
-        Save
-      </button>
+      <FButtonsButton text="Cancel" color="green-accent" bg-white />
+      <FButtonsButton text="Save" color="red-400" />
+      <FButtonsButton text="Save" color="blue-bg_button" bg-white />
+      <FButtonsButton text="Save" color="blue-bg_button" />
     </div>
   </div>
 </template>
