@@ -17,8 +17,8 @@
       </div>
     </div>
     <div class="flex justify-end font-bold space-x-4 mt-8">
-      <FButtonsButton text="Cancel" color="blue-bg_button" bg-white />
-      <FButtonsButton text="Save" color="blue-bg_button" />
+      <FButtonsButton text="Cancel" color="blue" bg-white />
+      <FButtonsButton text="Save" color="blue" />
     </div>
   </div>
 </template>
