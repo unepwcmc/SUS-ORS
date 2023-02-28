@@ -1,12 +1,18 @@
 <template>
-  <div class="bg-grey-accent p-4">
-    <button class="flex items-center mb-4">
-      <FIconEdit class="w-8 mr-1" />
-      Edit
-    </button>
-    <button class="flex items-center">
-      <FIconDelete class="w-8 mr-1" />
-      Delete
-    </button>
+  <div class="bg-grey-accent p-4 whitespace-nowrap">
+    <div v-for="(item, itemIndex) in actions" :key="itemIndex">
+      <FActionsActionButton :action="item" />
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    actions: {
+      type: Array,
+      default: () => []
+    }
+  }
+}
+</script>
