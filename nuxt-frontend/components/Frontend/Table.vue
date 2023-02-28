@@ -14,9 +14,7 @@
     <tbody>
       <tr v-for="(row, rowIndex) in data" :key="rowIndex" :class="{ 'bg-grey-bg': rowIndex % 2 == 1 }">
         <td v-for="(item, itemIndex) in Object.entries(row)" :key="itemIndex" class="first:p-4">
-          <div>
-            {{ item[1] }}
-          </div>
+          {{ item[1] }}
         </td>
         <td v-if="actions">
           <div class="flex justify-end pr-16">
