@@ -12,10 +12,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, itemIndex) in data" :key="itemIndex" :class="{ 'bg-grey-bg': itemIndex % 2 == 1 }">
-        <td v-for="(itemFromRow, itemFromRowIndex) in Object.entries(item)" :key="itemFromRowIndex" class="first:p-4">
+      <tr v-for="(row, rowIndex) in data" :key="rowIndex" :class="{ 'bg-grey-bg': rowIndex % 2 == 1 }">
+        <td v-for="(item, itemIndex) in Object.entries(row)" :key="itemIndex" class="first:p-4">
           <div>
-            {{ itemFromRow[1] }}
+            {{ item[1] }}
           </div>
         </td>
         <td v-if="actions">
