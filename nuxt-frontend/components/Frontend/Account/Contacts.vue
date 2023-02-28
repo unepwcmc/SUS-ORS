@@ -11,9 +11,11 @@
         <FFormInput label="Email" placeholder="Add email address" class="w-2/5" />
         <FFormInput label="Country" placeholder="Add country" class="w-2/5" />
         <div class="flex flex-col justify-end">
-          <button class="flex items-center h-14 mt-2 justify-center py-3 px-6 bg-blue-button rounded text-white font-bold">
-            + Add new contact
-          </button>
+          <FButtonsButton
+            color="blue"
+            class="w-full font-semibold whitespace-nowrap h-14"
+            text="+ Add new contact"
+          />
         </div>
       </div>
     </div>

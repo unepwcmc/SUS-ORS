@@ -6,7 +6,11 @@
       </div>
       <div class="w-[10rem] py-4">
         <FIconLogo class="w-full mb-3" />
-        <div class="bg-blue-font flex justify-center py-2 px-2 rounded-sm w-full font-semibold mt-3" v-text="buttonSupportCenterText" />
+        <FButtonsButton
+          color="blue"
+          class="w-full font-semibold whitespace-nowrap"
+          text="Support centre"
+        />
       </div>
     </div>
   </footer>
@@ -18,11 +22,6 @@ export default {
     title: {
       type: String,
       default: 'Inter-American Sea Turtle Convention'
-    }
-  },
-  computed: {
-    buttonSupportCenterText () {
-      return 'Support centre'
     }
   }
 }

@@ -34,7 +34,7 @@ export default {
       default: 'black'
     },
 
-    bgWhite: {
+    backgroundTransparent: {
       type: Boolean,
       default: false
     }
@@ -42,7 +42,7 @@ export default {
 
   computed: {
     btnClasses () {
-      return this.bgWhite
+      return this.backgroundTransparent
         ? COLOR_CLASSES.colorClassesWhiteBg[this.color] + ' ' + BASE_CLASSES
         : COLOR_CLASSES.colorClassesColoredBg[this.color] + ' ' + BASE_CLASSES
     }
