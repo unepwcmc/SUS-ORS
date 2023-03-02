@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="bg-grey-bg py-6 pl-14">
+    <h4 class="bg-grey-bg py-6 pl-14">
       Dashboard
-    </div>
+    </h4>
     <div class="flex justify-center">
       <div class="w-10/12">
         <div class="flex mt-12 items-center justify-between">
           <h3 class="">
             Created questionnaires
           </h3>
-          <FButtonsButton text="Add a new questionnaire" color="blue" class="" />
+          <FButtonsButton text="Add a new questionnaire" color="blue" class="font-semibold" />
         </div>
         <FTable
           :headers="headers"
