@@ -1,7 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 const screens = require('./tailwind-breakpoints.config.js')
-
 module.exports = {
-  mode: 'jit',
   purge: {
     content: [
       './components/**/*.{vue,js}',
@@ -14,7 +13,14 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    screens
+    screens,
+    extend: {
+      colors: {
+        blue: {
+          font: '#335DB0'
+        }
+      }
+    }
   },
   plugins: [
     function ({ addBase, theme }) {

@@ -10,10 +10,17 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    '@vue/standard',
+    'plugin:vue/recommended'
   ],
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'vue/no-v-html': 0,
+    'vue/multi-word-component-names': 0,
+    'vue/no-v-text-v-html-on-component': 0
+  }
 }

@@ -1,24 +1,27 @@
 ---
 header:
   -
-    name: Home
+    name: Dashboard
     url: /
   - 
-    name: Test
-    url: /test
-    dropdown:
-      -
-        name: Example 1
-        url: /example-1
-      -
-        name: Example 2
-        url: /example-2
-      -
-        name: Example 3
-        url: /example-3
+    name: Results & trends
+    url: /results-and-trends
+    # dropdown:
+    #   -
+    #     name: Example 1
+    #     url: /example-1
+    #   -
+    #     name: Example 2
+    #     url: /example-2
+    #   -
+    #     name: Example 3
+    #     url: /example-3
   -
-    name: About
-    url: /about
+    name: My account
+    url: /account
+  -
+    name: Log out
+    url: /account
 footer:
   -
     name: Home
