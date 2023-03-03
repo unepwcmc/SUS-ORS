@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 set :stage, :staging
-set :branch, 'feat/initial-end-points'
+set :branch, 'feat/deploy-to-staging'
 
 server 'web-supported-staging.linode.unep-wcmc.org', user: 'wcmc', roles: %w[app web db]
 
