@@ -4,6 +4,10 @@
 Rails.application.routes.draw do
   namespace :v1 do
     namespace :admin do
+      resources :tags
+      resources :meas do
+        resources :questionnaires
+      end
       devise_for :users,
         as: :admin,
         path: 'auth',
