@@ -1,14 +1,18 @@
 # frozen_string_literal: true
 
 set :stage, :staging
-set :branch, 'main'
+set :branch, 'feat/initial-end-points'
 
 server 'web-supported-staging.linode.unep-wcmc.org', user: 'wcmc', roles: %w[app web db]
 
-set :application, 'rails-7-nuxt-template'
-set :server_name, 'rails-7-nuxt-template.web-supported-staging.linode.unep-wcmc.org'
+set :application, 'sus-ors'
+set :server_name, 'sus-ors.web-supported-staging.linode.unep-wcmc.org'
 set :sudo_user, 'wcmc'
 set :app_port, '80'
+
+append :linked_files,
+  'nuxt-frontend/.env',
+  'rails-api/config/credentials/staging.key'
 
 # server-based syntax
 # ======================

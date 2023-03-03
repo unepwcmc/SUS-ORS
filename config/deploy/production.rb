@@ -5,8 +5,8 @@ set :branch, 'main'
 
 server 'web-supported-production.linode.unep-wcmc.org', user: 'wcmc', roles: %w[app web db]
 
-set :application, 'rails-7-nuxt-template'
-set :server_name, 'rails-7-nuxt-template.web-supported-production.linode.unep-wcmc.org'
+set :application, 'sus-ors'
+set :server_name, 'sus-ors.web-supported-production.linode.unep-wcmc.org'
 set :sudo_user, 'wcmc'
 set :app_port, '80'
 

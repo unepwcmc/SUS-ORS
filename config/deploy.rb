@@ -3,8 +3,8 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.16.0'
 
-set :application, 'rails-7-nuxt-template'
-set :repo_url, 'git@github.com:unepwcmc/rails-7-nuxt-template.git'
+set :application, 'sus-ors'
+set :repo_url, 'git@github.com:unepwcmc/SUS-ORS.git'
 
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v16.8.0'
