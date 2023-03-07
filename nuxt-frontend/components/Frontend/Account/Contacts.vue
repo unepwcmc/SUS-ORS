@@ -1,7 +1,12 @@
 <template>
   <div class="flex flex-col items-center">
-    <div class="text-3xl mb-6 item-start w-full">
-      Contacts
+    <div class="flex justify-between w-full mb-4">
+      <div class="text-2xl">
+        Contacts
+      </div>
+      <div class="border border-grey-accent py-2.5 pl-5 pr-4 text-sm">
+        &#128269; Search email address
+      </div>
     </div>
     <div class="bg-grey-bg w-full p-6">
       <div class="text-2xl mb-6">
@@ -13,7 +18,7 @@
         <div class="flex flex-col justify-end">
           <FButtonsButton
             color="blue"
-            class="w-full font-semibold whitespace-nowrap h-14"
+            class="w-full font-semibold whitespace-nowrap py-2.5 px-4"
             text="+ Add new contact"
           />
         </div>

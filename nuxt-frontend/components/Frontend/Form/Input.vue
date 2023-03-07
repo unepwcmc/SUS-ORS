@@ -1,18 +1,13 @@
 <template>
   <div>
-    <div v-if="!imposed">
-      <div class="text-xl">
+    <div class="mb-3">
+      <label class="text-[1.125rem] leading-6">
         {{ label }}
-      </div>
-      <input v-model="message" :placeholder="placeholder" class="h-14 border-2 pl-4 mt-2 w-full"></input>
+      </label>
     </div>
-    <div v-else>
-      <div class="text-xl">
-        {{ label }}
-      </div>
-      <div class="flex items-center text-neutral-200 h-14 border-2 pl-4 mt-2 w-full">
-        {{ placeholder }}
-      </div>
+    <input v-if="!imposed" v-model="message" :placeholder="placeholder" class="text-sm border-2 p-3.5 w-full">
+    <div v-else class="flex items-center text-neutral-200 text-sm border-2 p-3.5 w-full">
+      {{ placeholder }}
     </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ const COLOR_CLASSES = {
   }
 }
 
-const BASE_CLASSES = 'flex items-center justify-center py-3 px-8 border-2 rounded'
+const BASE_CLASSES = 'flex items-center justify-center border rounded'
 
 export default {
 
