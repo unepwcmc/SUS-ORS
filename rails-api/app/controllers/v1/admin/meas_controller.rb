@@ -19,7 +19,7 @@ module V1
 			def create
 			  @mea = Mea.new(mea_params)
 			  if @mea.save
-			    render :show, status: :created, location: v1_admin_meas_url
+			    render :show, status: :created, location: v1_admin_meas_url(@mea)
 			  else
 			    render json: @mea.errors, status: :unprocessable_entity
 			  end
@@ -29,7 +29,7 @@ module V1
 			# PATCH/PUT /v1/admin/meas/1.json
 			def update
 			  if @mea.update(mea_params)
-			    render :show, status: :ok, location: @mea
+			    render :show, status: :ok, location: v1_admin_meas_url(@mea)
 			  else
 			    render json: @mea.errors, status: :unprocessable_entity
 			  end
