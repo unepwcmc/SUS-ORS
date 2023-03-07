@@ -3,40 +3,48 @@
 - first_name: Ayesha
   last_name: Test
   email: ayesha.test@test.it
+  organisation_id: 1
   password: Passw0rd!
 
 - first_name: Kira
   last_name: Test
   email: kira.test@test.it
+  organisation_id: 1
   password: Passw0rd!
 
 - first_name: Tilly
   last_name: Test
   email: tilly.test@test.it
+  organisation_id: 2
   password: Passw0rd!
 
 - first_name: Francesca
   last_name: Test
   email: francesca.test@test.it
+  organisation_id: 2
   password: Passw0rd!
 
 - first_name: Jenna
   last_name: Test
   email: jenna.test@test.it
+  organisation_id: 3
   password: Passw0rd!
 
 - first_name: MAson
   last_name: Test
   email: mason.test@test.it
+  organisation_id: 3
   password: Passw0rd!
 
 - first_name: Rachael
   last_name: Test
   email: rachael.test@test.it
+  organisation_id: 4
   password: Passw0rd!  
 
 - first_name: Richard
   last_name: Test
   email: richard.test@test.it
+  organisation_id: 4
   password: Passw0rd!
 

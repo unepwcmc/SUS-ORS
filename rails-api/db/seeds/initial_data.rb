@@ -143,4 +143,9 @@ SectionText.create(section_id: 8,language_id: 1,heading: 'Other Contributors', t
 SectionText.create(section_id: 9,language_id: 1,heading: 'Additional Information', text: 'Optional additional information and comments')
 
 
+AnswerType.create(answer_type: 'Text', description: 'Free text field')
+AnswerType.create(answer_type: 'Numeric', description: 'Scalar number')
+AnswerType.create(answer_type: 'Choice', description: 'Select a single value from predefined choices')
+AnswerType.create(answer_type: 'Multi-Choice', description: 'Select one or more values from predefined choices')
+
 puts "Seeding complete!"
