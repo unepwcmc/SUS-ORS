@@ -1,13 +1,13 @@
 module.exports = {
   apps: [{
-    name: 'rails-7-nuxt-template',
+    name: 'sus-ors',
     script: 'yarn',
     watch: 'true',
     args: 'start',
-    cwd: '/home/wcmc/rails-7-nuxt-template/current/nuxt-frontend',
+    cwd: '/home/wcmc/sus-ors/current/nuxt-frontend',
     interpreter: '/bin/bash',
     env: {
-      NODE_PORT: '8080',
+      NODE_PORT: '3004',
       NODE_ENV: 'production'
     }
   }]
