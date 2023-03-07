@@ -22,7 +22,6 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
     "portal-vue": "^2.1.7",
-    "vue-loader": "^17.0.1",
     "vue-slick-carousel": "^1.0.6",
     "vue-tailwind": "^2.5.0",
     "vue-mugen-scroll": "^0.2.6",
