@@ -11,6 +11,8 @@
           ease-in-out
           border-r border-black
           last:border-r-0
+          first:pl-0
+          last:pr-0
         "
       >
         <div v-if="hasDropdown(link)">
@@ -19,7 +21,7 @@
         <div v-else @click="toggleActiveIndex(linkIndex)">
           <NuxtLink
             :to="link.url"
-            class="hover:text-blue-500 text-blue-font"
+            class="hover:text-blue-500 text-blue-font text-sm"
             :class="linkIndex === activeIndex ? 'font-bold' : ''"
             v-text="link.name"
           />
