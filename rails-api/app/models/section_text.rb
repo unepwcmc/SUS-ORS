@@ -1,0 +1,2 @@
+class SectionText < ApplicationRecord
+end

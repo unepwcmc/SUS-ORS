@@ -1,0 +1,2 @@
+class QuestionText < ApplicationRecord
+end

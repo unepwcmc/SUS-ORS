@@ -1,0 +1,2 @@
+class QuestionnaireSection < ApplicationRecord
+end
