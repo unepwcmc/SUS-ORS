@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :v1 do
     namespace :admin do
       resources :tags
+      resources :organisations
       resources :meas do
         resources :questionnaires
       end
