@@ -3,6 +3,7 @@
     <PortalTarget name="modal" />
     <PortalTarget name="before-header" />
     <FLayoutHeader />
+    <FLayoutHero />
 
     <Nuxt class="flex-1" />
 

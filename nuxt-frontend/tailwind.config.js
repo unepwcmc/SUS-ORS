@@ -17,7 +17,11 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          font: '#335DB0'
+          font: '#335DB0',
+          bg_button: '#335DB0'
+        },
+        grey: {
+          accent: '#D9D9D9'
         }
       }
     }
