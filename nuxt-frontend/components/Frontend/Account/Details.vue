@@ -4,13 +4,13 @@
       My Account details
     </div>
     <div class="flex space-x-6">
-      <FAccountProfilePictureCard class="w-[19.8rem]" />
-      <div class="flex flex-col justify-between w-[26rem]">
+      <FAccountProfilePictureCard class="w-[14rem]" />
+      <div class="flex flex-col justify-between grow">
         <FFormInput label="First name" placeholder="Add your first name" />
         <FFormInput label="Email address" placeholder="Add email here " />
         <FFormInput label="Created by" placeholder="UNEP-WCMC Admin" imposed />
       </div>
-      <div class="flex flex-col justify-between w-[26rem]">
+      <div class="flex flex-col justify-between grow">
         <FFormInput label="Last name" placeholder="Add your last name " />
         <FFormInput label="Phone number" placeholder="Add a phone number" />
         <FFormInput label="Created" :placeholder="dateToday" imposed />

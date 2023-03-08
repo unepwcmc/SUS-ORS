@@ -1,20 +1,27 @@
 <template>
   <div>
-    <ul class="flex border-grey-accent border rounded py-4 px-14 mb-14 justify-between w-[361px] container m-auto">
+    <ul
+      class="flex border-grey-accent border rounded-sm mb-14 justify-between w-[32rem] container m-auto pt-4"
+    >
       <li
         v-for="(tab, tabIndex) in tabs"
         :key="tabIndex"
+        class="relative grow"
         :class="[
           isCurrentTab(tabIndex) ? activeTabClasses : inactiveTabClasses
         ]"
         @click="selectTab(tabIndex)"
       >
-        <div class="flex">
+        <div class="flex justify-center pb-4">
           <component :is="`FIcon${tab.header}`" class="w-8 mr-1" />
           <div class="flex items-center">
             {{ tab.header }}
           </div>
         </div>
+        <div
+          v-if="isCurrentTab(tabIndex)"
+          class="h-[0.125rem] rounded bg-blue-font absolute bottom-[-0.1rem] left-0 w-full"
+        />
       </li>
     </ul>
     <slot />
