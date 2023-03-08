@@ -43,13 +43,11 @@
 export default {
   data () {
     return {
-      data: [
-        { country: 'UK', Email: 'main-respondent-UK@ramsar.com' },
-        { country: 'Malawi', Email: 'main-respondent-Malawi@ramsar.com' },
-        { country: 'Iceland', Email: 'main-respondent-Iceland@ramsar.com' },
-        { country: 'Sweden', Email: 'main-respondent-Sweden@ramsar.com' }
-      ],
-      headers: ['Countries', 'Email', 'Actions']
+      headers: [{ text: 'Countries' }, { text: 'Email' }, { text: 'Actions', style: 'pl-20' }],
+      data: [{ col1: { country: 'UK', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-UK@ramsar.com', style: '' } },
+        { col1: { country: 'Malawi', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Malawi@ramsar.com', style: '' } },
+        { col1: { country: 'Iceland', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Iceland@ramsar.com', style: '' } },
+        { col1: { country: 'Sweden', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Sweden@ramsar.com', style: '' } }]
     }
   }
 }
