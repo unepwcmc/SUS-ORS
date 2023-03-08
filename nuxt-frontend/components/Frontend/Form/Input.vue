@@ -5,7 +5,10 @@
         {{ label }}
       </label>
     </div>
-    <input v-if="!imposed" v-model="message" :placeholder="placeholder" class="text-sm border-2 p-3.5 w-full">
+    <div v-if="!imposed" class="flex relative">
+      <input v-model="message" :placeholder="placeholder" class="text-sm border-2 p-3.5 w-full">
+      <FIconChevronRight v-if="chevron" class="text-black opacity-60 items-center w-5 rotate-90 absolute right-[1rem] top-[1rem]" />
+    </div>
     <div v-else class="flex items-center text-neutral-200 text-sm border-2 p-3.5 w-full">
       {{ placeholder }}
     </div>
@@ -25,6 +28,11 @@ export default {
       default: false
     },
 
+    chevron: {
+      type: Boolean,
+      default: false
+    },
+
     placeholder: {
       type: String,
       default: undefined
@@ -38,3 +46,9 @@ export default {
   }
 }
 </script>
+
+<style>
+div[data-lastpass-icon-root] {
+  display: none;
+}
+</style>
