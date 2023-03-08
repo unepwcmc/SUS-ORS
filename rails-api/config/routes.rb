@@ -2,13 +2,16 @@
 
 # @see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
+  
   namespace :v1 do
     namespace :admin do
       resources :users
       resources :tags
       resources :organisations
       resources :meas do
-        resources :questionnaires
+        resources :questionnaires do
+          resources :questionnaire_sections
+        end
       end
       devise_for :users,
         as: :admin,
