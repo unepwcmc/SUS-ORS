@@ -1,10 +1,10 @@
 <template>
   <table class="table-auto w-full my-12">
     <thead class="border-2 border-grey-bg">
-      <tr class="">
-        <th v-for="(item, itemIndex) in headers" :key="itemIndex" class="first:p-4">
+      <tr>
+        <th v-for="(item, itemIndex) in headers" :key="itemIndex" class="first:py-4 first:pl-5">
           <div :class="{'flex justify-end pr-16': isLastItem(itemIndex)}">
-            <div class="flex" :class="[{'justify-center w-32': isLastItem(itemIndex)}, item.style]">
+            <div class="flex text-sm font-normal" :class="[{'justify-center w-32': isLastItem(itemIndex)}, item.style]">
               {{ item.text }}
             </div>
           </div>
@@ -16,7 +16,7 @@
         <td
           v-for="(item, itemIndex) in Object.entries(row)"
           :key="itemIndex"
-          class="first:p-4"
+          class="first:py-2.5 text-[1.125rem] leading-6 first:pl-[1.125rem]"
           :class="Object.entries(item[1])[1][1]"
         >
           <NuxtLink
