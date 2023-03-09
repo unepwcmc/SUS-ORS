@@ -43,11 +43,11 @@
 export default {
   data () {
     return {
-      headers: [{ text: 'Countries' }, { text: 'Email' }, { text: 'Actions' }],
-      data: [{ col1: { country: 'UK', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-UK@ramsar.com', style: '' } },
-        { col1: { country: 'Malawi', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Malawi@ramsar.com', style: '' } },
-        { col1: { country: 'Iceland', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Iceland@ramsar.com', style: '' } },
-        { col1: { country: 'Sweden', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Sweden@ramsar.com', style: '' } }]
+      headers: [{ text: 'Countries' }, { text: 'Email', style: 'pl-96' }, { text: 'Actions' }],
+      data: [{ col1: { country: 'UK', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-UK@ramsar.com', style: 'pl-96' } },
+        { col1: { country: 'Malawi', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Malawi@ramsar.com', style: 'pl-96' } },
+        { col1: { country: 'Iceland', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Iceland@ramsar.com', style: 'pl-96' } },
+        { col1: { country: 'Sweden', style: 'whitespace-nowrap text-blue-font' }, col2: { Email: 'main-respondent-Sweden@ramsar.com', style: 'pl-96' } }]
     }
   }
 }
