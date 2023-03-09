@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h4 class="bg-grey-bg py-6 pl-14">
+    <div class="bg-grey-bg py-6 pl-16 text-lg font-normal">
       Dashboard
-    </h4>
+    </div>
     <div class="flex justify-center">
       <div class="w-10/12">
         <div class="flex mt-12 items-center justify-between">
