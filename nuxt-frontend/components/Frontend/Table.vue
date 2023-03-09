@@ -17,18 +17,18 @@
           v-for="(item, itemIndex) in Object.entries(row)"
           :key="itemIndex"
           class="first:py-2.5 text-[1.125rem] leading-6 first:pl-[1.125rem]"
-          :class="Object.entries(item[1])[1][1]"
+          :class="dataToUse(item)"
         >
           <NuxtLink
-            v-if="Object.entries(item[1])[0][0] === 'Link'"
+            v-if="checkItemStatus(item, 'Link')"
             :to="'/'"
-            v-text="Object.entries(item[1])[0][1]"
+            v-text="dataToDisplay(item)"
           />
-          <div v-else-if="Object.entries(item[1])[0][0] === 'IndicatorStatus'">
-            <FIndicatorStatus :is-active="Object.entries(item[1])[0][1]" />
+          <div v-else-if="checkItemStatus(item, 'IndicatorStatus')">
+            <FIndicatorStatus :is-active="dataToDisplay(item)" />
           </div>
           <div v-else>
-            {{ Object.entries(item[1])[0][1] }}
+            {{ dataToDisplay(item) }}
           </div>
         </td>
         <td v-if="actions">
@@ -64,6 +64,18 @@ export default {
   methods: {
     isLastItem (index) {
       return this.headers.length === index + 1
+    },
+
+    checkItemStatus (item, itemStatus) {
+      return this.dataToUse(item, 1, 0, 0) === itemStatus
+    },
+
+    dataToDisplay (item) {
+      return this.dataToUse(item, 1, 0, 1)
+    },
+
+    dataToUse (item, a = 1, b = 1, c = 1) {
+      return Object.entries(item[a])[b][c]
     }
   }
 }
