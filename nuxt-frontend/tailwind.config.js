@@ -26,7 +26,10 @@ module.exports = {
           profile_pic: '#757575'
         },
         red: {
-          button: '#E25151'
+          inactive: '#E25151'
+        },
+        green: {
+          active: '#91E251'
         }
       }
     }

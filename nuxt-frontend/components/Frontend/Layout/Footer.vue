@@ -8,7 +8,7 @@
         <FIconLogo class="w-full mb-3" />
         <FButtonsButton
           color="blue"
-          class="w-full font-semibold whitespace-nowrap"
+          class="w-full font-bold whitespace-nowrap text-sm py-2.5 px-[1.125rem]"
           text="Support centre"
         />
       </div>
