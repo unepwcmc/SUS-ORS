@@ -5,9 +5,7 @@
       <div class="bg-grey-bg w-1/4 pt-10 flex justify-end">
         <FLayoutQuestionnaireCreateMenu />
       </div>
-      <div class="bg-red-500 flex-grow">
-        right side !!
-      </div>
+      <FLayoutQuestionnaireCreateFromScratch class="w-1/2" />
     </div>
   </div>
 </template>
