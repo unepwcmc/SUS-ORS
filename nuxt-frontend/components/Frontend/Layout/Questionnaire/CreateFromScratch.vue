@@ -4,7 +4,7 @@
       New questionnaire
     </h2>
     <FFormInput label="Questionnaire name" placeholder="name" class="pb-8" />
-    <FFormInput label="Date" placeholder="Ramsar National Report to COP14" class="pb-8" />
+    <FFormInput label="Date" :placeholder="dateToday" class="pb-8" />
     <div class="flex space-x-[1.625rem] pb-10">
       <FFormInput label="Label dropdown" placeholder="Select language" chevron class="w-1/2" />
       <FFormInput label="Add other languages" placeholder="Select other languages" chevron class="w-1/2" />
@@ -14,3 +14,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import dateToday from '../../../../functions/todaysDate.js'
+
+export default {
+  computed: {
+    dateToday () {
+      return dateToday()
+    }
+  }
+}
+</script>
