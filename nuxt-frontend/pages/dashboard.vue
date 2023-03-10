@@ -9,7 +9,7 @@
           <h3 class="">
             Created questionnaires
           </h3>
-          <FButtonsButton text="Add a new questionnaire" color="blue" class="font-bold py-2.5 px-[1.125rem]" />
+          <FButtonsButton text="Add a new questionnaire" color="blue" url="/createQuestionnaire" class="text-sm font-bold py-2.5 px-[1.125rem] text-white" />
         </div>
         <FTable
           :headers="headers"

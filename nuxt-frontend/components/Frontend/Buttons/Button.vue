@@ -2,7 +2,15 @@
   <button
     :class="btnClasses"
   >
-    {{ text }}
+    <NuxtLink
+      v-if="url"
+      :to="url"
+      class="hover:text-red-500"
+      v-text="text"
+    />
+    <div v-else>
+      {{ text }}
+    </div>
   </button>
 </template>
 
@@ -19,7 +27,7 @@ const COLOR_CLASSES = {
   }
 }
 
-const BASE_CLASSES = 'flex items-center justify-center border rounded'
+const BASE_CLASSES = 'flex items-center justify-center border rounded-sm'
 
 export default {
 
@@ -37,6 +45,11 @@ export default {
     backgroundTransparent: {
       type: Boolean,
       default: false
+    },
+
+    url: {
+      type: String,
+      default: null
     }
   },
 
