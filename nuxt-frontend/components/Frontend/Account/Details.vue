@@ -24,22 +24,12 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      message: undefined
-    }
-  },
+import dateToday from '../../../functions/todaysDate.js'
 
+export default {
   computed: {
     dateToday () {
-      const date = new Date()
-      const [month, day, year] = [
-        date.getMonth(),
-        date.getDate(),
-        date.getFullYear()
-      ]
-      return `${day}/${month}/${year}`
+      return dateToday()
     }
   }
 }
