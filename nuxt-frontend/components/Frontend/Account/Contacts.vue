@@ -13,7 +13,7 @@
         Add new contact
       </div>
       <div class="flex justify-between space-x-6">
-        <FFormInput label="Email" placeholder="Add email address" class="w-2/5" />
+        <FFormInput label="Email" placeholder="Add email address" class="w-2/5" chevron />
         <FFormInput label="Country" placeholder="Add country" class="w-2/5" />
         <div class="flex flex-col justify-end">
           <FButtonsButton
