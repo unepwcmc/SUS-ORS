@@ -1,0 +1,151 @@
+# frozen_string_literal: true
+
+puts "Seeding tables ... "
+
+Collaborator.create(respondent_id: 1, user_id: 1)
+Collaborator.create(respondent_id: 2, user_id: 2)
+Collaborator.create(respondent_id: 3, user_id: 7)
+Collaborator.create(respondent_id: 4, user_id: 6)
+
+
+countries = YAML.load_file(Rails.root.join('db/data/countries.yml'))
+
+Country.create!(countries.map(&:deep_symbolize_keys))
+
+
+Language.create(name_short: 'EN', name_long: 'English')
+Language.create(name_short: 'FR', name_long: 'French')
+Language.create(name_short: 'ES', name_long: 'Spanish')
+Language.create(name_short: 'DE', name_long: 'German')
+
+Mea.create(name_short: 'Ramsar', name_long: 'Ramsar')
+Mea.create(name_short: 'AEWA', name_long: 'Agreement on the Conservation of African-Eurasian Migratory Waterbirds')
+Mea.create(name_short: 'ICCA', name_long: 'ICCA Registry')
+Mea.create(name_short: 'IAC', name_long: 'The Inter-American Convention for the Protection and Conservation of Sea Turtles')
+
+Organisation.create(name_short: 'LIZ', name_long: 'Lizard Inc.')
+Organisation.create(name_short: 'ZEB', name_long: 'Zebra Solutions')
+Organisation.create(name_short: 'TIG', name_long: 'Tiger Data')
+Organisation.create(name_short: 'MAG', name_long: 'Magpie Trinkets')
+
+MeaAdmin.create(mea_id: 1, user_id: 4)
+MeaAdmin.create(mea_id: 2, user_id: 8)
+MeaAdmin.create(mea_id: 3, user_id: 5)
+MeaAdmin.create(mea_id: 4, user_id: 3)
+
+QuestionText.create(question_id: 1, language_id: 1, text: 'Region')
+QuestionText.create(question_id: 2, language_id: 1, text: 'Country')
+QuestionText.create(question_id: 3, language_id: 1, text: 'E-mail')
+QuestionText.create(question_id: 4, language_id: 1, text: 'Name of reporting country')
+QuestionText.create(question_id: 5, language_id: 1, text: 'Full name of the institution')
+QuestionText.create(question_id: 8, language_id: 1, text: 'P.O. Box')
+QuestionText.create(question_id: 9, language_id: 1, text: 'Postal code')
+QuestionText.create(question_id: 10, language_id: 1, text: 'City')
+QuestionText.create(question_id: 11, language_id: 1, text: 'Country')
+QuestionText.create(question_id: 12, language_id: 1, text: 'Telephone')
+QuestionText.create(question_id: 6, language_id: 1, text: 'Name and title')
+QuestionText.create(question_id: 13, language_id: 1, text: 'Website')
+QuestionText.create(question_id: 7, language_id: 1, text: 'Mailing address	Street and number')
+QuestionText.create(question_id: 14, language_id: 1, text: 'Affiliation	Institution, Department')
+QuestionText.create(question_id: 15, language_id: 1, text: 'Please insert information on any other relevant institutions/entities/individual experts that have contributed to this report')
+QuestionText.create(question_id: 16, language_id: 1, text: 'Please insert additional information and comments')
+
+
+QuestionnaireSection.create(questionnaire_id: 1, section_number: 1)
+QuestionnaireSection.create(questionnaire_id: 1, section_number: 2)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 3)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 4)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 5)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 6)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 7)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 8)
+QuestionnaireSection.create(parent_id: 2, questionnaire_id: 1, section_number: 9)
+
+Questionnaire.create(mea_id: 2, title: 'European Goose Management Platform', is_template: false)
+
+16.times do
+ Question.create(mea_id: 2, language_id: 1)
+end
+
+
+Respondent.create(country_id: 4, mea_id: 1, respondent_email: 'ramsar_resp1@gmail.com')
+Respondent.create(country_id: 17, mea_id: 1, respondent_email: 'ramsar_resp2@gmail.com')
+Respondent.create(country_id: 100, mea_id: 2, respondent_email: 'aewa_resp1@gmail.com')
+Respondent.create(country_id: 150, mea_id: 4, respondent_email: 'iac_resp1@gmail.com')
+
+
+
+SectionQuestion.create(section_id: 1,question_id: 1,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 1,question_id: 2,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 1,question_id: 3,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 2,question_id: 4,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 5,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 6,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 7,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 8,question_number: 4,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 9,question_number: 5,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 10,question_number: 6,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 11,question_number: 7,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 12,question_number: 8,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 3,question_number: 9,mandatory: false)
+SectionQuestion.create(section_id: 3,question_id: 13,question_number: 10,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 6,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 14,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 7,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 8,question_number: 4,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 9,question_number: 5,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 10,question_number: 6,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 11,question_number: 7,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 12,question_number: 8,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 3,question_number: 9,mandatory: false)
+SectionQuestion.create(section_id: 4,question_id: 13,question_number: 10,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 6,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 14,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 7,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 8,question_number: 4,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 9,question_number: 5,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 10,question_number: 6,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 11,question_number: 7,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 12,question_number: 8,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 3,question_number: 9,mandatory: false)
+SectionQuestion.create(section_id: 5,question_id: 13,question_number: 10,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 6,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 14,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 7,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 8,question_number: 4,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 9,question_number: 5,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 10,question_number: 6,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 11,question_number: 7,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 12,question_number: 8,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 3,question_number: 9,mandatory: false)
+SectionQuestion.create(section_id: 6,question_id: 13,question_number: 10,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 6,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 14,question_number: 2,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 7,question_number: 3,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 8,question_number: 4,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 9,question_number: 5,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 10,question_number: 6,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 11,question_number: 7,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 12,question_number: 8,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 3,question_number: 9,mandatory: false)
+SectionQuestion.create(section_id: 7,question_id: 13,question_number: 10,mandatory: false)
+SectionQuestion.create(section_id: 8,question_id: 15,question_number: 1,mandatory: false)
+SectionQuestion.create(section_id: 9,question_id: 16,question_number: 1,mandatory: false)
+
+SectionText.create(section_id: 1,language_id: 1,heading: '')
+SectionText.create(section_id: 2,language_id: 1,heading: 'General Information')
+SectionText.create(section_id: 3,language_id: 1,heading: 'Designated National EGMP Administrative Authority')
+SectionText.create(section_id: 4,language_id: 1,heading: 'Designated National Government Representative (NGR) for EGMP matters')
+SectionText.create(section_id: 5,language_id: 1,heading: 'Additional designated National Government Representative (NGR) for EGMP matters (if available)')
+SectionText.create(section_id: 6,language_id: 1,heading: 'Designated National Expert (NE) for EGMP matters')
+SectionText.create(section_id: 7,language_id: 1,heading: 'Additional designated National Expert (NE) for EGMP matters (if available)')
+SectionText.create(section_id: 8,language_id: 1,heading: 'Other Contributors', text: 'Other relevant institutions/entities/individual experts that have contributed to this report')
+SectionText.create(section_id: 9,language_id: 1,heading: 'Additional Information', text: 'Optional additional information and comments')
+
+
+AnswerType.create(answer_type: 'Text', description: 'Free text field')
+AnswerType.create(answer_type: 'Numeric', description: 'Scalar number')
+AnswerType.create(answer_type: 'Choice', description: 'Select a single value from predefined choices')
+AnswerType.create(answer_type: 'Multi-Choice', description: 'Select one or more values from predefined choices')
+
+puts "Seeding complete!"

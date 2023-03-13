@@ -50,8 +50,9 @@ module V1
       # Only allow a list of trusted parameters through.
       def user_params
         # TODO: check this
-        params.require(:user).permit(
-          :name,
+        params.permit(
+          :first_name,
+          :last_name,
           :email,
           :password,
           :password_confirmation

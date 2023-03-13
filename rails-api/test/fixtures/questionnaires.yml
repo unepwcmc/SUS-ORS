@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  version: MyString
+  active: false
+  mea_id: 1
+  status_id: 1
+  num_responses: 1
+  is_template: false
+
+two:
+  title: MyString
+  version: MyString
+  active: false
+  mea_id: 1
+  status_id: 1
+  num_responses: 1
+  is_template: false

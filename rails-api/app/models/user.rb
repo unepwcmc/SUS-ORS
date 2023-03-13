@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :resources, inverse_of: %i[created_by updated_by]
 
-  validates :name, presence: true, length: { minimum: 2 }
+  validates :first_name, presence: true, length: { minimum: 2 }
   validates :email,
     presence: true,
     uniqueness: true,
@@ -30,7 +30,7 @@ class User < ApplicationRecord
   def as_json(*_args)
     {
       id: id,
-      name: name,
+      first_name: first_name,
       email: email,
       jti: jti,
       created_at: created_at,

@@ -1,0 +1,2 @@
+class QuestionnaireRule < ApplicationRecord
+end
