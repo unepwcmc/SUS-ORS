@@ -2,7 +2,7 @@
 header:
   -
     name: Dashboard
-    url: /
+    url: /dashboard
   - 
     name: Results & trends
     url: /results-and-trends

@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 const screens = require('./tailwind-breakpoints.config.js')
 module.exports = {
   purge: {
@@ -17,7 +17,19 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          font: '#335DB0'
+          font: '#335DB0',
+          button: '#335DB0'
+        },
+        grey: {
+          accent: '#D9D9D9',
+          bg: '#F5F5F5',
+          profile_pic: '#757575'
+        },
+        red: {
+          inactive: '#E25151'
+        },
+        green: {
+          active: '#91E251'
         }
       }
     }

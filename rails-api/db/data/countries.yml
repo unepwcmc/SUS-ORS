@@ -1,0 +1,499 @@
+
+- name: Algeria
+  iso3: DZA
+- name: Egypt
+  iso3: EGY
+- name: Libya
+  iso3: LBY
+- name: Morocco
+  iso3: MAR
+- name: Sudan
+  iso3: SDN
+- name: Tunisia
+  iso3: TUN
+- name: Western Sahara
+  iso3: ESH
+- name: British Indian Ocean Territory
+  iso3: IOT
+- name: Burundi
+  iso3: BDI
+- name: Comoros
+  iso3: COM
+- name: Djibouti
+  iso3: DJI
+- name: Eritrea
+  iso3: ERI
+- name: Ethiopia
+  iso3: ETH
+- name: French Southern Territories
+  iso3: ATF
+- name: Kenya
+  iso3: KEN
+- name: Madagascar
+  iso3: MDG
+- name: Malawi
+  iso3: MWI
+- name: Mauritius
+  iso3: MUS
+- name: Mayotte
+  iso3: MYT
+- name: Mozambique
+  iso3: MOZ
+- name: Réunion
+  iso3: REU
+- name: Rwanda
+  iso3: RWA
+- name: Seychelles
+  iso3: SYC
+- name: Somalia
+  iso3: SOM
+- name: South Sudan
+  iso3: SSD
+- name: Uganda
+  iso3: UGA
+- name: United Republic of Tanzania
+  iso3: TZA
+- name: Zambia
+  iso3: ZMB
+- name: Zimbabwe
+  iso3: ZWE
+- name: Angola
+  iso3: AGO
+- name: Cameroon
+  iso3: CMR
+- name: Central African Republic
+  iso3: CAF
+- name: Chad
+  iso3: TCD
+- name: Congo
+  iso3: COG
+- name: Democratic Republic of the Congo
+  iso3: COD
+- name: Equatorial Guinea
+  iso3: GNQ
+- name: Gabon
+  iso3: GAB
+- name: Sao Tome and Principe
+  iso3: STP
+- name: Botswana
+  iso3: BWA
+- name: Eswatini
+  iso3: SWZ
+- name: Lesotho
+  iso3: LSO
+- name: Namibia
+  iso3: NAM
+- name: South Africa
+  iso3: ZAF
+- name: Benin
+  iso3: BEN
+- name: Burkina Faso
+  iso3: BFA
+- name: Cabo Verde
+  iso3: CPV
+- name: Côte d’Ivoire
+  iso3: CIV
+- name: Gambia
+  iso3: GMB
+- name: Ghana
+  iso3: GHA
+- name: Guinea
+  iso3: GIN
+- name: Guinea-Bissau
+  iso3: GNB
+- name: Liberia
+  iso3: LBR
+- name: Mali
+  iso3: MLI
+- name: Mauritania
+  iso3: MRT
+- name: Niger
+  iso3: NER
+- name: Nigeria
+  iso3: NGA
+- name: Saint Helena
+  iso3: SHN
+- name: Senegal
+  iso3: SEN
+- name: Sierra Leone
+  iso3: SLE
+- name: Togo
+  iso3: TGO
+- name: Anguilla
+  iso3: AIA
+- name: Antigua and Barbuda
+  iso3: ATG
+- name: Aruba
+  iso3: ABW
+- name: Bahamas
+  iso3: BHS
+- name: Barbados
+  iso3: BRB
+- name: Bonaire, Sint Eustatius and Saba
+  iso3: BES
+- name: British Virgin Islands
+  iso3: VGB
+- name: Cayman Islands
+  iso3: CYM
+- name: Cuba
+  iso3: CUB
+- name: Curaçao
+  iso3: CUW
+- name: Dominica
+  iso3: DMA
+- name: Dominican Republic
+  iso3: DOM
+- name: Grenada
+  iso3: GRD
+- name: Guadeloupe
+  iso3: GLP
+- name: Haiti
+  iso3: HTI
+- name: Jamaica
+  iso3: JAM
+- name: Martinique
+  iso3: MTQ
+- name: Montserrat
+  iso3: MSR
+- name: Puerto Rico
+  iso3: PRI
+- name: Saint Barthélemy
+  iso3: BLM
+- name: Saint Kitts and Nevis
+  iso3: KNA
+- name: Saint Lucia
+  iso3: LCA
+- name: Saint Martin (French Part)
+  iso3: MAF
+- name: Saint Vincent and the Grenadines
+  iso3: VCT
+- name: Sint Maarten (Dutch part)
+  iso3: SXM
+- name: Trinidad and Tobago
+  iso3: TTO
+- name: Turks and Caicos Islands
+  iso3: TCA
+- name: United States Virgin Islands
+  iso3: VIR
+- name: Belize
+  iso3: BLZ
+- name: Costa Rica
+  iso3: CRI
+- name: El Salvador
+  iso3: SLV
+- name: Guatemala
+  iso3: GTM
+- name: Honduras
+  iso3: HND
+- name: Mexico
+  iso3: MEX
+- name: Nicaragua
+  iso3: NIC
+- name: Panama
+  iso3: PAN
+- name: Argentina
+  iso3: ARG
+- name: Bolivia (Plurinational State of)
+  iso3: BOL
+- name: Bouvet Island
+  iso3: BVT
+- name: Brazil
+  iso3: BRA
+- name: Chile
+  iso3: CHL
+- name: Colombia
+  iso3: COL
+- name: Ecuador
+  iso3: ECU
+- name: Falkland Islands (Malvinas)
+  iso3: FLK
+- name: French Guiana
+  iso3: GUF
+- name: Guyana
+  iso3: GUY
+- name: Paraguay
+  iso3: PRY
+- name: Peru
+  iso3: PER
+- name: South Georgia and the South Sandwich Islands
+  iso3: SGS
+- name: Suriname
+  iso3: SUR
+- name: Uruguay
+  iso3: URY
+- name: Venezuela (Bolivarian Republic of)
+  iso3: VEN
+- name: Bermuda
+  iso3: BMU
+- name: Canada
+  iso3: CAN
+- name: Greenland
+  iso3: GRL
+- name: Saint Pierre and Miquelon
+  iso3: SPM
+- name: United States of America
+  iso3: USA
+- name: Antarctica
+  iso3: ATA
+- name: Kazakhstan
+  iso3: KAZ
+- name: Kyrgyzstan
+  iso3: KGZ
+- name: Tajikistan
+  iso3: TJK
+- name: Turkmenistan
+  iso3: TKM
+- name: Uzbekistan
+  iso3: UZB
+- name: China
+  iso3: CHN
+- name: China, Hong Kong Special Administrative Region
+  iso3: HKG
+- name: China, Macao Special Administrative Region
+  iso3: MAC
+- name: Democratic People's Republic of Korea
+  iso3: PRK
+- name: Japan
+  iso3: JPN
+- name: Mongolia
+  iso3: MNG
+- name: Republic of Korea
+  iso3: KOR
+- name: Brunei Darussalam
+  iso3: BRN
+- name: Cambodia
+  iso3: KHM
+- name: Indonesia
+  iso3: IDN
+- name: Lao People's Democratic Republic
+  iso3: LAO
+- name: Malaysia
+  iso3: MYS
+- name: Myanmar
+  iso3: MMR
+- name: Philippines
+  iso3: PHL
+- name: Singapore
+  iso3: SGP
+- name: Thailand
+  iso3: THA
+- name: Timor-Leste
+  iso3: TLS
+- name: Viet Nam
+  iso3: VNM
+- name: Afghanistan
+  iso3: AFG
+- name: Bangladesh
+  iso3: BGD
+- name: Bhutan
+  iso3: BTN
+- name: India
+  iso3: IND
+- name: Iran (Islamic Republic of)
+  iso3: IRN
+- name: Maldives
+  iso3: MDV
+- name: Nepal
+  iso3: NPL
+- name: Pakistan
+  iso3: PAK
+- name: Sri Lanka
+  iso3: LKA
+- name: Armenia
+  iso3: ARM
+- name: Azerbaijan
+  iso3: AZE
+- name: Bahrain
+  iso3: BHR
+- name: Cyprus
+  iso3: CYP
+- name: Georgia
+  iso3: GEO
+- name: Iraq
+  iso3: IRQ
+- name: Israel
+  iso3: ISR
+- name: Jordan
+  iso3: JOR
+- name: Kuwait
+  iso3: KWT
+- name: Lebanon
+  iso3: LBN
+- name: Oman
+  iso3: OMN
+- name: Qatar
+  iso3: QAT
+- name: Saudi Arabia
+  iso3: SAU
+- name: State of Palestine
+  iso3: PSE
+- name: Syrian Arab Republic
+  iso3: SYR
+- name: Türkiye
+  iso3: TUR
+- name: United Arab Emirates
+  iso3: ARE
+- name: Yemen
+  iso3: YEM
+- name: Belarus
+  iso3: BLR
+- name: Bulgaria
+  iso3: BGR
+- name: Czechia
+  iso3: CZE
+- name: Hungary
+  iso3: HUN
+- name: Poland
+  iso3: POL
+- name: Republic of Moldova
+  iso3: MDA
+- name: Romania
+  iso3: ROU
+- name: Russian Federation
+  iso3: RUS
+- name: Slovakia
+  iso3: SVK
+- name: Ukraine
+  iso3: UKR
+- name: Åland Islands
+  iso3: ALA
+- name: Guernsey
+  iso3: GGY
+- name: Jersey
+  iso3: JEY
+- name: Sark
+  iso3: 
+- name: Denmark
+  iso3: DNK
+- name: Estonia
+  iso3: EST
+- name: Faroe Islands
+  iso3: FRO
+- name: Finland
+  iso3: FIN
+- name: Iceland
+  iso3: ISL
+- name: Ireland
+  iso3: IRL
+- name: Isle of Man
+  iso3: IMN
+- name: Latvia
+  iso3: LVA
+- name: Lithuania
+  iso3: LTU
+- name: Norway
+  iso3: NOR
+- name: Svalbard and Jan Mayen Islands
+  iso3: SJM
+- name: Sweden
+  iso3: SWE
+- name: United Kingdom of Great Britain and Northern Ireland
+  iso3: GBR
+- name: Albania
+  iso3: ALB
+- name: Andorra
+  iso3: AND
+- name: Bosnia and Herzegovina
+  iso3: BIH
+- name: Croatia
+  iso3: HRV
+- name: Gibraltar
+  iso3: GIB
+- name: Greece
+  iso3: GRC
+- name: Holy See
+  iso3: VAT
+- name: Italy
+  iso3: ITA
+- name: Malta
+  iso3: MLT
+- name: Montenegro
+  iso3: MNE
+- name: North Macedonia
+  iso3: MKD
+- name: Portugal
+  iso3: PRT
+- name: San Marino
+  iso3: SMR
+- name: Serbia
+  iso3: SRB
+- name: Slovenia
+  iso3: SVN
+- name: Spain
+  iso3: ESP
+- name: Austria
+  iso3: AUT
+- name: Belgium
+  iso3: BEL
+- name: France
+  iso3: FRA
+- name: Germany
+  iso3: DEU
+- name: Liechtenstein
+  iso3: LIE
+- name: Luxembourg
+  iso3: LUX
+- name: Monaco
+  iso3: MCO
+- name: Netherlands
+  iso3: NLD
+- name: Switzerland
+  iso3: CHE
+- name: Australia
+  iso3: AUS
+- name: Christmas Island
+  iso3: CXR
+- name: Cocos (Keeling) Islands
+  iso3: CCK
+- name: Heard Island and McDonald Islands
+  iso3: HMD
+- name: New Zealand 
+  iso3: NZL
+- name: Norfolk Island
+  iso3: NFK
+- name: Fiji
+  iso3: FJI
+- name: New Caledonia
+  iso3: NCL
+- name: Papua New Guinea
+  iso3: PNG
+- name: Solomon Islands
+  iso3: SLB
+- name: Vanuatu
+  iso3: VUT
+- name: Guam
+  iso3: GUM
+- name: Kiribati
+  iso3: KIR
+- name: Marshall Islands
+  iso3: MHL
+- name: Micronesia (Federated States of)
+  iso3: FSM
+- name: Nauru
+  iso3: NRU
+- name: Northern Mariana Islands
+  iso3: MNP
+- name: Palau
+  iso3: PLW
+- name: United States Minor Outlying Islands
+  iso3: UMI
+- name: American Samoa
+  iso3: ASM
+- name: Cook Islands
+  iso3: COK
+- name: French Polynesia
+  iso3: PYF
+- name: Niue
+  iso3: NIU
+- name: Pitcairn
+  iso3: PCN
+- name: Samoa
+  iso3: WSM
+- name: Tokelau
+  iso3: TKL
+- name: Tonga
+  iso3: TON
+- name: Tuvalu
+  iso3: TUV
+- name: Wallis and Futuna Islands
+  iso3: WLF

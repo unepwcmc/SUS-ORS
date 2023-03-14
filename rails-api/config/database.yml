@@ -15,17 +15,17 @@
 # gem 'pg'
 #
 default: &default
-  host: <%= ENV.fetch("RAILS_7_NUXT_TEMPLATE_DATABASE_HOST", 'localhost') %>
+  host: <%= ENV.fetch("SUS_ORS_HOST", 'localhost') %>
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_7_NUXT_TEMPLATE_RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV.fetch("RAILS_7_NUXT_TEMPLATE_DATABASE_USERNAME", 'postgres') %>
+  pool: <%= ENV.fetch("SUS_ORS_RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("SUS_ORS_DATABASE_USERNAME", 'postgres') %>
 
 development:
   <<: *default
-  database: rails_7_nuxt_template_development
+  database: sus_ors_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_7_nuxt_template_test
+  database: sus_ors_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,17 +84,17 @@ test:
 
 production:
   <<: *default
-  database: rails_7_nuxt_template_production
-  username: <%= Rails.application.credentials.dig(:production, :database, :username) %>
-  password: <%= Rails.application.credentials.dig(:production, :database, :password) %>
-  host: <%= Rails.application.credentials.dig(:production, :database, :host) %>
-  port: <%= Rails.application.credentials.dig(:production, :database, :port) %>
+  database: sus_ors_production
+  username: <%= Rails.application.credentials.dig(:database, :username) %>
+  password: <%= Rails.application.credentials.dig(:database, :password) %>
+  host: <%= Rails.application.credentials.dig(:database, :host) %>
+  port: <%= Rails.application.credentials.dig(:database, :port) %>
 
 staging:
   <<: *default
-  database: rails_7_nuxt_template_staging
-  username: <%= Rails.application.credentials.dig(:staging, :database, :username) %>
-  password: <%= Rails.application.credentials.dig(:staging, :database, :password) %>
-  host: <%= Rails.application.credentials.dig(:staging, :database, :host) %>
-  port: <%= Rails.application.credentials.dig(:staging, :database, :port) %>
+  database: sus_ors_staging
+  username: <%= Rails.application.credentials.dig(:database, :username) %>
+  password: <%= Rails.application.credentials.dig(:database, :password) %>
+  host: <%= Rails.application.credentials.dig(:database, :host) %>
+  port: <%= Rails.application.credentials.dig(:database, :port) %>
 

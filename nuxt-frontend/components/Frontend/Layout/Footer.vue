@@ -1,27 +1,27 @@
 <template>
-  <footer class="w-full py-3 px-4 2xl:px-0 bg-gray-700 text-white text-xs">
-    <FContainer>
-      <div
-        class="
-          lg:flex
-          space-y-8
-          lg:justify-between lg:items-center lg:space-x-24 lg:space-y-0
-        "
-      >
-        <div>
-          &copy; {{ currentYear }} UNEP-WCMC
-        </div>
-        <img class="h-7" src="~/assets/img/UNEP-WCMC_white.png">
+  <footer class="py-5 px-6 2xl:px-0 bg-grey-accent text-white">
+    <div class="w-auto mx-16 flex justify-between">
+      <div class="text-black text-3xl pt-4">
+        {{ title }}
       </div>
-    </FContainer>
+      <div class="w-[10rem] py-4">
+        <FIconLogo class="w-full mb-3" />
+        <FButtonsButton
+          color="blue"
+          class="w-full font-bold whitespace-nowrap text-sm py-2.5 px-[1.125rem]"
+          text="Support centre"
+        />
+      </div>
+    </div>
   </footer>
 </template>
 
 <script>
 export default {
-  computed: {
-    currentYear () {
-      return new Date().getFullYear()
+  props: {
+    title: {
+      type: String,
+      default: 'Inter-American Sea Turtle Convention'
     }
   }
 }

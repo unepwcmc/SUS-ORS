@@ -1,0 +1,2 @@
+class QualifierOption < ApplicationRecord
+end

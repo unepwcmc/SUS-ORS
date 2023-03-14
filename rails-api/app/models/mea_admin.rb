@@ -1,0 +1,2 @@
+class MeaAdmin < ApplicationRecord
+end
