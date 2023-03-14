@@ -152,10 +152,10 @@ export default {
     }
   },
 
-  publicRuntimeConfig: {
-    baseUrl: process.env.BASE_URL,
-    directUploadsEndpoint: `${process.env.RAILS_ENDPOINT}/rails/active_storage/direct_uploads`
-  },
+  // publicRuntimeConfig: {
+  //   baseUrl: process.env.BASE_URL,
+  //   directUploadsEndpoint: `${process.env.RAILS_ENDPOINT}/rails/active_storage/direct_uploads`
+  // },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
